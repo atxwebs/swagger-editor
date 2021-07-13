@@ -40,7 +40,7 @@ Script name | Description
 Script name | Description
 --- | ---
 `build` | Build a new set of JS and CSS assets, and output them to `/dist`.
-`build:bundle` | Build `swagger-editor-bundle.js` only (commonJS). 
+`build:bundle` | Build `swagger-editor-bundle.js` only (commonJS).
 `build:core` | Build `swagger-editor.(js\|css)` only (commonJS).
 `build:standalone` | Build `swagger-editor-standalone-preset.js` only (commonJS).
 `build:stylesheets` | Build `swagger-editor.css` only.
@@ -65,17 +65,21 @@ Script name | Description
 
 ##### Prerequisites
 
-- NPM 6.x
+- NPM >=6.12.x
 
 Generally, we recommend the following guidelines from [Node.js Releases](https://nodejs.org/en/about/releases/) to only use Active LTS or Maintenance LTS releases.
 
+Current Node.js:
+- Node.js 16.x
+- NPM >=7.10.x
+
 Current Node.js Active LTS:
-- Node.js 12.x
-- NPM 6.x
+- Node.js 14.x
+- NPM >=6.12.x
 
 Current Node.js Maintenance LTS:
-- Node.js 10.x
-- NPM 6.x
+- Node.js 12.x
+- NPM >= 6.12.x
 
 
 If you have Node.js and npm installed, you can run `npm start` to spin up a static server.
@@ -122,7 +126,7 @@ docker run -d -p 80:8080 -v $(pwd):/tmp -e SWAGGER_FILE=/tmp/swagger.json swagge
 docker run -d -p 80:8080 -e URL=/foo/swagger.json -v /bar:/usr/share/nginx/html/foo swaggerapi/swagger-editor
 ```
 
-* You can specify a different base url at which where to access the application - for example if you want to application to be available at `http://localhost/swagger-editor/`:
+* You can specify a different base url for accessing the application - for example if you want the application to be available at `http://localhost/swagger-editor/`:
 
 ```
 docker run -d -p 80:8080 -e BASE_URL=/swagger-editor swaggerapi/swagger-editor
